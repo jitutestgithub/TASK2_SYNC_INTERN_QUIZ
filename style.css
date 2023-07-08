@@ -1,0 +1,167 @@
+ @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+ * {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+ }
+ 
+ body {
+     font-family: 'Lilita One', cursive;
+     background: #2a2b2e;
+     color: #fff;
+ }
+ 
+ .main-wrapper {
+     height: 100vh;
+     position: relative;
+     text-align: center;
+ }
+ 
+ .title-wrapper {
+     background: #ade25d;
+     padding: 15px;
+     box-shadow: 0 0 10px #000;
+ }
+ 
+ .quiz-title {
+     font-size: 4rem;
+     animation-name: movingText;
+     animation-duration: 3s;
+     animation-iteration-count: infinite;
+ }
+ 
+ @keyframes movingText {
+     0% {
+         text-shadow: 1px 2px 9px #1d5430;
+     }
+     50% {
+         text-shadow: 0px -1px 3px #1d5430;
+     }
+     100% {
+         text-shadow: 1px 2px 9px #1d5430;
+     }
+ }
+ 
+ .score-board {
+     padding: 15px 0;
+     font-size: 2rem;
+ }
+ 
+ .question-box {
+     background: #f7f7f7;
+     padding: 30px;
+     color: #070707;
+     font-size: 1.8rem;
+     width: 80vw;
+     margin: 15px auto;
+     border-radius: 20px;
+ }
+ 
+ #question {
+     opacity: 0.8;
+     letter-spacing: 1px;
+ }
+ 
+ .play-btn {
+     padding-top: 10px;
+ }
+ 
+ .btn-hover-effect {
+     font-size: 2rem;
+     border: 2px solid rgba(238, 228, 228, 0.822);
+     background: #9fd802;
+     width: 200px;
+     margin: 0 auto;
+     padding: 10px 20px;
+     border-radius: 35px;
+     cursor: pointer;
+     transition: all 0.5s ease;
+ }
+ 
+ .btn-hover-effect:hover {
+     color: #232323;
+     animation-name: play-effect;
+     animation-duration: 0.4s;
+     animation-iteration-count: 2;
+ }
+ 
+ @keyframes play-effect {
+     0% {
+         transform: rotate(0deg);
+     }
+     25% {
+         transform: rotate(-5deg);
+     }
+     50% {
+         transform: rotate(0deg);
+     }
+     75% {
+         transform: rotate(5deg);
+     }
+     100% {
+         transform: rotate(0deg);
+     }
+ }
+ 
+ .option-wrapper {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 80vw;
+     margin: 0 auto;
+ }
+ 
+ .option-left,
+ .option-right {
+     width: 50%;
+ }
+ 
+ .option-box {
+     height: 70px;
+     margin: 20px;
+     background: #ade25d;
+     border-radius: 50px;
+     position: relative;
+ }
+ 
+ .option-box button {
+     position: absolute;
+     width: 50px;
+     height: 50px;
+     border: none;
+     border-radius: 50%;
+     top: 50%;
+     left: 20px;
+     transform: translateY(-50%);
+     font-family: 'Lilita One', cursive;
+     font-size: 1.5rem;
+     color: #fff;
+     outline: none;
+     background: #070707;
+ }
+ 
+ .option-text {
+     position: absolute;
+     left: 100px;
+     color: #070707;
+     font-size: 1.5rem;
+     top: 50%;
+     transform: translateY(-50%);
+ }
+ 
+ .exit-section {
+     padding-bottom: 40px;
+ }
+ 
+ @media(max-width: 768px) {
+     .option-wrapper {
+         flex-direction: column;
+     }
+     .option-left,
+     .option-right {
+         width: 100%;
+     }
+     .option-right .option-container div:first-of-type {
+         margin-top: 0;
+     }
+ }
